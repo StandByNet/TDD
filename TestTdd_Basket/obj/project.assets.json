@@ -1660,6 +1660,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "Tdd_Basket/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Tdd_Basket.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tdd_Basket.dll": {}
+        }
       }
     }
   },
@@ -6053,6 +6063,11 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "Tdd_Basket/1.0.0": {
+      "type": "project",
+      "path": "../Tdd_Basket/Tdd_Basket.csproj",
+      "msbuildProject": "../Tdd_Basket/Tdd_Basket.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6060,6 +6075,7 @@
       "MSTest.TestAdapter >= 2.2.3",
       "MSTest.TestFramework >= 2.2.3",
       "Microsoft.NET.Test.Sdk >= 16.9.4",
+      "Tdd_Basket >= 1.0.0",
       "coverlet.collector >= 3.0.2"
     ]
   },
@@ -6099,7 +6115,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Veille_Technique\\KATA\\Tdd_Basket\\Tdd_Basket.csproj": {
+              "projectPath": "C:\\Veille_Technique\\KATA\\Tdd_Basket\\Tdd_Basket.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

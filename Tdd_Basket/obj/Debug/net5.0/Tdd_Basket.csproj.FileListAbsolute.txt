@@ -5,7 +5,6 @@ C:\Veille_Technique\KATA\Tdd_Basket\bin\Debug\net5.0\Tdd_Basket.runtimeconfig.de
 C:\Veille_Technique\KATA\Tdd_Basket\bin\Debug\net5.0\Tdd_Basket.dll
 C:\Veille_Technique\KATA\Tdd_Basket\bin\Debug\net5.0\ref\Tdd_Basket.dll
 C:\Veille_Technique\KATA\Tdd_Basket\bin\Debug\net5.0\Tdd_Basket.pdb
-C:\Veille_Technique\KATA\Tdd_Basket\obj\Debug\net5.0\Tdd_Basket.csproj.AssemblyReference.cache
 C:\Veille_Technique\KATA\Tdd_Basket\obj\Debug\net5.0\Tdd_Basket.GeneratedMSBuildEditorConfig.editorconfig
 C:\Veille_Technique\KATA\Tdd_Basket\obj\Debug\net5.0\Tdd_Basket.AssemblyInfoInputs.cache
 C:\Veille_Technique\KATA\Tdd_Basket\obj\Debug\net5.0\Tdd_Basket.AssemblyInfo.cs
@@ -14,3 +13,4 @@ C:\Veille_Technique\KATA\Tdd_Basket\obj\Debug\net5.0\Tdd_Basket.dll
 C:\Veille_Technique\KATA\Tdd_Basket\obj\Debug\net5.0\ref\Tdd_Basket.dll
 C:\Veille_Technique\KATA\Tdd_Basket\obj\Debug\net5.0\Tdd_Basket.pdb
 C:\Veille_Technique\KATA\Tdd_Basket\obj\Debug\net5.0\Tdd_Basket.genruntimeconfig.cache
+C:\Veille_Technique\KATA\Tdd_Basket\obj\Debug\net5.0\Tdd_Basket.csproj.AssemblyReference.cache
