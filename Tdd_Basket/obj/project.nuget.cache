@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "nX8cRsl1IZA9O8sZxaDdPI9TL/6wq4789nFiZGcm4pwcSGTcRFBEuOHq0GBUi9zO+9kcDyBBY4q1R+ysTtQOKQ==",
+  "success": true,
+  "projectFilePath": "C:\\Veille_Technique\\KATA\\Tdd_Basket\\Tdd_Basket.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kaiber\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+  ],
+  "logs": []
+}

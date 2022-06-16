@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Tdd_Basket/1.0.0": {
+        "runtime": {
+          "Tdd_Basket.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Tdd_Basket/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
