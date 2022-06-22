@@ -13,4 +13,3 @@ C:\Veille_Technique\KATA\Tdd_Basket\obj\Debug\net5.0\Tdd_Basket.dll
 C:\Veille_Technique\KATA\Tdd_Basket\obj\Debug\net5.0\ref\Tdd_Basket.dll
 C:\Veille_Technique\KATA\Tdd_Basket\obj\Debug\net5.0\Tdd_Basket.pdb
 C:\Veille_Technique\KATA\Tdd_Basket\obj\Debug\net5.0\Tdd_Basket.genruntimeconfig.cache
-C:\Veille_Technique\KATA\Tdd_Basket\obj\Debug\net5.0\Tdd_Basket.csproj.AssemblyReference.cache

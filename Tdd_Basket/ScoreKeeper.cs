@@ -8,28 +8,17 @@ namespace Tdd_Basket
 {
     public class ScoreKeeper : IScoreKeeper
     {
-        private string scoreBorad = "";
-        private string scoreTeamA = "";
-        private string scoreTeamB = "";
-        private int scoreTeam1 = 0;
-        private int scoreTeam2 = 0;
+        private string scoreBorad = "", scoreTeamA = "", scoreTeamB = "", buttonPut;
+        private int scoreTeam1 = 0, scoreTeam2 = 0;
 
         public string GetScore()
         {
-            if (scoreBorad.Equals(scoreTeamA + ":" + scoreTeamB))
-            {
-                scoreTeam1++;
-                scoreTeamA = ConvertScore(scoreTeam1);// scoreTeam1.ToString();
-                scoreBorad = scoreTeamA + ":" + scoreTeamB;
-                return scoreBorad;
-            }
-            scoreTeamA = "000";
-            scoreTeamB = "000";
-            scoreBorad = scoreTeamA + ":" + scoreTeamB;
+            ScoreTeamA1();
+            ScoreTeamA2();
             return scoreBorad;
         }
-
-        private string ConvertScore(int scoreTeam1)
+       
+        private static string ConvertScore(int scoreTeam1)
         {
             return scoreTeam1.ToString().Length switch
             {
@@ -42,12 +31,34 @@ namespace Tdd_Basket
 
         public void ScoreTeamA1()
         {
-            throw new NotImplementedException();
+            if (scoreBorad.Equals(scoreTeamA + ":" + scoreTeamB))
+            {
+                scoreTeam1++;
+                scoreTeamA = ConvertScore(scoreTeam1);
+                scoreBorad = scoreTeamA + ":" + scoreTeamB;
+            }
+            InitalizScore();
+        }
+
+        private void InitalizScore()
+        {
+            if (String.IsNullOrEmpty(scoreBorad))
+            {
+                scoreTeamA = "000";
+                scoreTeamB = "000";
+                scoreBorad = scoreTeamA + ":" + scoreTeamB;
+            }
         }
 
         public void ScoreTeamA2()
         {
-            throw new NotImplementedException();
+            if (scoreBorad.Equals(scoreTeamA + ":" + scoreTeamB))
+            {
+                scoreTeam2++;
+                scoreTeamB = ConvertScore(scoreTeam2);
+                scoreBorad = scoreTeamA + ":" + scoreTeamB;
+            }
+            InitalizScore();
         }
 
         public void ScoreTeamA3()

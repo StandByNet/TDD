@@ -1,6 +1,6 @@
 ﻿namespace Tdd_Basket
 {
-    internal interface IScoreKeeper
+    public interface IScoreKeeper
     {
         void ScoreTeamA1();
         void ScoreTeamA2();
