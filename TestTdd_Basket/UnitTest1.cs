@@ -129,7 +129,7 @@ namespace TestTdd_Basket
         }
 
         [TestMethod]
-        public void GetScore_ShouldReturn_000_004_WhenTeamAScoreTwice2Points()
+        public void GetScore_ShouldReturn_000_004_WhenTeamBScoreTwice2Points()
         {
             scoreKeeper.ScoreTeamB2();
             scoreKeeper.ScoreTeamB2();
