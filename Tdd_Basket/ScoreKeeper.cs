@@ -8,9 +8,8 @@ namespace Tdd_Basket
 {
     public class ScoreKeeper : IScoreKeeper
     {
-        private string scoreKeeper = "000:000";
-        private string scoreTeamB = "000";
-        private string scoreTeamA = "000";
+        private string scoreKeeper = "000:000", scoreTeamB = "000", scoreTeamA = "000";
+        private int scoreTeam_A = 0;
 
         public string GetScore()
         {
@@ -19,18 +18,26 @@ namespace Tdd_Basket
 
         public void ScoreTeamA1()
         {
-            if (scoreKeeper.Equals("000:" + scoreTeamB))
+            if (scoreKeeper.Equals(scoreKeeper))
             {
-                scoreTeamA = "001";
+                scoreTeam_A++;
+                scoreTeamA = ConvertScore(scoreTeam_A);// "001";
             }
-            else if (scoreKeeper.Equals("001:" + scoreTeamB))
-            {
-                scoreTeamA = "002";
-            }
-            else
-            {
-                scoreTeamA = "003";
-            }
+            //if (scoreKeeper.Equals("000:" + scoreTeamB))
+            //{
+            //    scoreTeam_A++;
+            //    scoreTeamA = ConvertScore(scoreTeam_A);// "001";
+            //}
+            //else if (scoreKeeper.Equals("001:" + scoreTeamB))
+            //{
+            //    scoreTeam_A++;
+            //    scoreTeamA = ConvertScore(scoreTeam_A);// "002";
+            //}
+            //else
+            //{
+            //    scoreTeam_A++;
+            //    scoreTeamA = ConvertScore(scoreTeam_A); //"003";
+            //}
             scoreKeeper = scoreTeamA + ":" + scoreTeamB;
         }
 
@@ -59,16 +66,16 @@ namespace Tdd_Basket
             throw new NotImplementedException();
         }
 
-        //private static string ConvertScore(int scoreTeam1)
-        //{
-        //    return scoreTeam1.ToString().Length switch
-        //    {
-        //        1 => "00" + scoreTeam1.ToString(),
-        //        2 => "0" + scoreTeam1.ToString(),
-        //        3 => scoreTeam1.ToString(),
-        //        _ => throw new NotImplementedException(),
-        //    };
-        //}
+        private static string ConvertScore(int scoreTeam1)
+        {
+            return scoreTeam1.ToString().Length switch
+            {
+                1 => "00" + scoreTeam1.ToString(),
+                2 => "0" + scoreTeam1.ToString(),
+                3 => scoreTeam1.ToString(),
+                _ => throw new NotImplementedException(),
+            };
+        }
 
         ////public void ScoreTeamA1()
         ////{

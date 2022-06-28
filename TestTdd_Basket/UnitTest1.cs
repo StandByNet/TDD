@@ -1,6 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Tdd_Basket;
-using Moq;
 
 
 namespace TestTdd_Basket
@@ -39,6 +38,7 @@ namespace TestTdd_Basket
             scoreKeeper.ScoreTeamA1();
             Assert.AreEqual(scoreKeeper.GetScore(), "003:000");
         }
+
 
     }
 }
