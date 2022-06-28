@@ -76,26 +76,5 @@ namespace Tdd_Basket
             };
         }
 
-        ////public void ScoreTeamA1()
-        ////{
-        ////    if (scoreBorad.Equals(scoreTeamA + ":" + scoreTeamB))
-        ////    {
-        ////        scoreTeam1++;
-        ////        scoreTeamA = ConvertScore(scoreTeam1);
-        ////        scoreBorad = scoreTeamA + ":" + scoreTeamB;
-        ////    }
-        ////    InitalizScore();
-        ////}
-
-        //private void InitalizScore()
-        //{
-        //    if (String.IsNullOrEmpty(scoreBorad))
-        //    {
-        //        scoreTeamA = "000";
-        //        scoreTeamB = "000";
-        //        scoreBorad = scoreTeamA + ":" + scoreTeamB;
-        //    }
-        //}
-
     }
 }

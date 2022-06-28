@@ -127,6 +127,14 @@ namespace TestTdd_Basket
             scoreKeeper.ScoreTeamB2();
             Assert.AreEqual(scoreKeeper.GetScore(), "000:002");
         }
+
+        [TestMethod]
+        public void GetScore_ShouldReturn_000_004_WhenTeamAScoreTwice2Points()
+        {
+            scoreKeeper.ScoreTeamB2();
+            scoreKeeper.ScoreTeamB2();
+            Assert.AreEqual(scoreKeeper.GetScore(), "000:004");
+        }
         #endregion
     }
 }
