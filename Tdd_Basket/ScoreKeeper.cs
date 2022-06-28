@@ -18,22 +18,14 @@ namespace Tdd_Basket
 
         public void ScoreTeamA1()
         {
-            if (scoreKeeper.Equals(scoreTeamA + ":" + scoreTeamB))
-            {
-                scoreTeam_A++;
-                scoreTeamA = ConvertScore(scoreTeam_A);
-            }
-            scoreKeeper = scoreTeamA + ":" + scoreTeamB;
+            scoreTeam_A++;
+            UpdateScoreA(scoreTeam_A);
         }
 
         public void ScoreTeamA2()
         {
-            if (scoreKeeper.Equals(scoreTeamA + ":" +scoreTeamB))
-            {
-                scoreTeam_A += 2;
-                scoreTeamA = ConvertScore(scoreTeam_A);
-                scoreKeeper = scoreTeamA + ":" + scoreTeamB;
-            }
+            scoreTeam_A += 2;
+            UpdateScoreA(scoreTeam_A);
         }
 
         public void ScoreTeamA3()
@@ -43,27 +35,19 @@ namespace Tdd_Basket
 
         public void ScoreTeamB1()
         {
-            if (scoreKeeper.Equals(scoreTeamA + ":" + scoreTeamB))
-            {
-                scoreTeam_B++;
-                scoreTeamB = ConvertScore(scoreTeam_B);
-            }
-            scoreKeeper = scoreTeamA + ":" + scoreTeamB;
+            scoreTeam_B++;
+            UpdateScoreB(scoreTeam_B);           
+        }       
+
+        public void ScoreTeamB2()
+        {
+            scoreTeam_B += 2;
+            UpdateScoreB(scoreTeam_B);
         }
 
         public void ScoreTeamB3()
         {
             throw new NotImplementedException();
-        }
-
-        public void ScoreTeamB2()
-        {
-            if (scoreKeeper.Equals(scoreTeamA + ":" + scoreTeamB))
-            {
-                scoreTeam_B += 2;
-                scoreTeamB = ConvertScore(scoreTeam_B);
-                scoreKeeper = scoreTeamA + ":" + scoreTeamB;
-            }
         }
 
         private static string ConvertScore(int scoreTeam1)
@@ -77,5 +61,16 @@ namespace Tdd_Basket
             };
         }
 
+        private void UpdateScoreA(int scoreTeam_A)
+        {
+            scoreTeamA = ConvertScore(scoreTeam_A);
+            scoreKeeper = scoreTeamA + ":" + scoreTeamB;
+        }
+
+        private void UpdateScoreB(int scoreTeam_B)
+        {
+            scoreTeamB = ConvertScore(scoreTeam_B);
+            scoreKeeper = scoreTeamA + ":" + scoreTeamB;
+        }
     }
 }
