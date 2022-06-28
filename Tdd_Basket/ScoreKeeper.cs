@@ -9,7 +9,7 @@ namespace Tdd_Basket
     public class ScoreKeeper : IScoreKeeper
     {
         private string scoreKeeper = "000:000", scoreTeamB = "000", scoreTeamA = "000";
-        private int scoreTeam_A = 0;
+        private int scoreTeam_A = 0, scoreTeam_B = 0;
 
         public string GetScore()
         {
@@ -40,8 +40,10 @@ namespace Tdd_Basket
         {
             if (scoreKeeper.Equals(scoreTeamA + ":" + scoreTeamB))
             {
-                scoreKeeper = "000:001";
+                scoreTeam_B++;
+                scoreTeamB = ConvertScore(scoreTeam_B);
             }
+            scoreKeeper = scoreTeamA + ":" + scoreTeamB;
         }
 
         public void ScoreTeamB3()
