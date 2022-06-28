@@ -8,7 +8,7 @@ namespace TestTdd_Basket
     public class UnitTest1
     {
         readonly ScoreKeeper scoreKeeper = new();
-
+        #region Test Score One Point
         [TestMethod]
         public void GetScore_ShouldReturn_000_000_WhenNoGoal()
         {
@@ -85,6 +85,14 @@ namespace TestTdd_Basket
             scoreKeeper.ScoreTeamA1();
             scoreKeeper.ScoreTeamB1();
             Assert.AreEqual(scoreKeeper.GetScore(), "003:003");
+        }
+        #endregion
+
+        [TestMethod]
+        public void GetScore_ShouldReturn_002_000_WhenTeamAScore2Points()
+        {
+            scoreKeeper.ScoreTeamA2();
+            Assert.AreEqual(scoreKeeper.GetScore(), "002:000");
         }
     }
 }
