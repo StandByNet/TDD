@@ -136,6 +136,7 @@ namespace TestTdd_Basket
         }
         #endregion
         #endregion
+        #region Test Score Three POINTS
         #region TeamA
         [TestMethod]
         public void GetScore_ShouldReturn003_000_WhenTeamAScore3Points()
@@ -161,7 +162,8 @@ namespace TestTdd_Basket
             scoreKeeper.ScoreTeamB3();
             Assert.AreEqual("000:003", scoreKeeper.GetScore());
         }
-
         #endregion
+        #endregion
+
     }
 }

@@ -48,7 +48,8 @@ namespace Tdd_Basket
 
         public void ScoreTeamB3()
         {
-            throw new NotImplementedException();
+            scoreTeam_B += 3;
+            UpdateScoreB(scoreTeam_B);
         }
 
         private static string ConvertScore(int scoreTeam1)
