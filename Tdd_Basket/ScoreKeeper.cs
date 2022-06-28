@@ -45,6 +45,7 @@ namespace Tdd_Basket
             UpdateScoreB(scoreTeam_B);
         }
 
+
         public void ScoreTeamB3()
         {
             throw new NotImplementedException();
