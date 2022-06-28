@@ -164,6 +164,22 @@ namespace TestTdd_Basket
         }
         #endregion
         #endregion
-
+        #region TEST score Differently
+        [TestMethod]
+        public void GetScore_ShouldReturn011_010_WhenTeamAAndTeamBScoreLot()
+        {
+            scoreKeeper.ScoreTeamA1();
+            scoreKeeper.ScoreTeamA3();
+            scoreKeeper.ScoreTeamB3();
+            scoreKeeper.ScoreTeamB2();
+            scoreKeeper.ScoreTeamB1();
+            scoreKeeper.ScoreTeamB1();
+            scoreKeeper.ScoreTeamB3();
+            scoreKeeper.ScoreTeamA2();
+            scoreKeeper.ScoreTeamA2();
+            scoreKeeper.ScoreTeamA3();
+            Assert.AreEqual("011:010",scoreKeeper.GetScore());
+        }
+        #endregion
     }
 }
