@@ -58,7 +58,11 @@ namespace Tdd_Basket
 
         public void ScoreTeamB2()
         {
-            throw new NotImplementedException();
+            if (scoreKeeper.Equals(scoreTeamA + ":" + scoreTeamB))
+            {
+                scoreTeam_B += 2;
+                scoreKeeper = scoreTeamB + ":" + ConvertScore(scoreTeam_B);
+            }
         }
 
         private static string ConvertScore(int scoreTeam1)
