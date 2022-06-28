@@ -9,34 +9,35 @@ namespace TestTdd_Basket
     public class UnitTest1
     {
         readonly ScoreKeeper scoreKeeper = new();
-       // private readonly Mock<ScoreKeeper> mockRepo = new Mock<ScoreKeeper>();
-       
+
         [TestMethod]
-        public void GetScore_return00x_000_when_TeamAGetOneGool()
-        {            
-            Assert.AreEqual("000:000", scoreKeeper.GetScore());
-            Assert.AreEqual("001:000", scoreKeeper.GetScore());
-            Assert.AreEqual("002:000", scoreKeeper.GetScore());
-            Assert.AreEqual("003:000", scoreKeeper.GetScore());
+        public void GetScore_ShouldReturn_000_000_WhenNoGoal()
+        {
+            Assert.AreEqual(scoreKeeper.GetScore(), "000:000");
         }
 
         [TestMethod]
-        public void GetScore_return000_00x_when_TeamBGetOneGool()
+        public void GetScore_ShouldReturn_001_000_WhenTeamAScore()
         {
-            Assert.AreEqual("000:000", scoreKeeper.GetScore());
-            Assert.AreEqual("000:001", scoreKeeper.GetScore());
-            Assert.AreEqual("000:002", scoreKeeper.GetScore());
-            Assert.AreEqual("000:003", scoreKeeper.GetScore());
-           // Assert.AreEqual("000:004", scoreKeeper.GetScore());
+            scoreKeeper.ScoreTeamA1();
+            Assert.AreEqual(scoreKeeper.GetScore(), "001:000");
         }
 
         [TestMethod]
-        public void GetScore_return00x_00x_when_TeamBGetOneGool()
+        public void GetScore_ShouldReturn_002_000_WhenTeamAScoreTwice()
         {
-            Assert.AreEqual("000:001", scoreKeeper.GetScore());
-            Assert.AreEqual("001:002", scoreKeeper.GetScore());
-            Assert.AreEqual("002:003", scoreKeeper.GetScore());
-            Assert.AreEqual("003:004", scoreKeeper.GetScore());
+            scoreKeeper.ScoreTeamA1();
+            scoreKeeper.ScoreTeamA1();
+            Assert.AreEqual(scoreKeeper.GetScore(), "002:000");
+        }
+
+        [TestMethod]
+        public void GetScore_ShouldReturn_003_000_WhenTeamAScore3Times()
+        {
+            scoreKeeper.ScoreTeamA1();
+            scoreKeeper.ScoreTeamA1();
+            scoreKeeper.ScoreTeamA1();
+            Assert.AreEqual(scoreKeeper.GetScore(), "003:000");
         }
 
     }
