@@ -39,6 +39,11 @@ namespace TestTdd_Basket
             Assert.AreEqual(scoreKeeper.GetScore(), "003:000");
         }
 
-
+        [TestMethod]
+        public void GetScore_ShouldReturn_000_001_WhenTeamBScore()
+        {
+            scoreKeeper.ScoreTeamB1();
+            Assert.AreEqual(scoreKeeper.GetScore(), "000:001");
+        }
     }
 }

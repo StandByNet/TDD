@@ -18,26 +18,11 @@ namespace Tdd_Basket
 
         public void ScoreTeamA1()
         {
-            if (scoreKeeper.Equals(scoreKeeper))
+            if (scoreKeeper.Equals(scoreTeamA + ":" + scoreTeamB))
             {
                 scoreTeam_A++;
-                scoreTeamA = ConvertScore(scoreTeam_A);// "001";
+                scoreTeamA = ConvertScore(scoreTeam_A);
             }
-            //if (scoreKeeper.Equals("000:" + scoreTeamB))
-            //{
-            //    scoreTeam_A++;
-            //    scoreTeamA = ConvertScore(scoreTeam_A);// "001";
-            //}
-            //else if (scoreKeeper.Equals("001:" + scoreTeamB))
-            //{
-            //    scoreTeam_A++;
-            //    scoreTeamA = ConvertScore(scoreTeam_A);// "002";
-            //}
-            //else
-            //{
-            //    scoreTeam_A++;
-            //    scoreTeamA = ConvertScore(scoreTeam_A); //"003";
-            //}
             scoreKeeper = scoreTeamA + ":" + scoreTeamB;
         }
 
@@ -53,7 +38,10 @@ namespace Tdd_Basket
 
         public void ScoreTeamB1()
         {
-            throw new NotImplementedException();
+            if (scoreKeeper.Equals(scoreTeamA + ":" + scoreTeamB))
+            {
+                scoreKeeper = "000:001";
+            }
         }
 
         public void ScoreTeamB3()
