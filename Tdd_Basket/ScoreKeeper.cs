@@ -31,7 +31,8 @@ namespace Tdd_Basket
             if (scoreKeeper.Equals(scoreTeamA + ":" +scoreTeamB))
             {
                 scoreTeam_A += 2;
-                scoreKeeper = ConvertScore(scoreTeam_A) + ":" + scoreTeamB;
+                scoreTeamA = ConvertScore(scoreTeam_A);
+                scoreKeeper = scoreTeamA + ":" + scoreTeamB;
             }
         }
 
