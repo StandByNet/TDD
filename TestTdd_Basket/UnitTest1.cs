@@ -8,7 +8,9 @@ namespace TestTdd_Basket
     public class UnitTest1
     {
         readonly ScoreKeeper scoreKeeper = new();
+
         #region Test Score One Point
+        #region For TeamA
         [TestMethod]
         public void GetScore_ShouldReturn_000_000_WhenNoGoal()
         {
@@ -38,6 +40,9 @@ namespace TestTdd_Basket
             scoreKeeper.ScoreTeamA1();
             Assert.AreEqual(scoreKeeper.GetScore(), "003:000");
         }
+
+        #endregion
+        #region For TeamB
 
         [TestMethod]
         public void GetScore_ShouldReturn_000_001_WhenTeamBScore()
@@ -87,6 +92,9 @@ namespace TestTdd_Basket
             Assert.AreEqual(scoreKeeper.GetScore(), "003:003");
         }
         #endregion
+        #endregion
+
+        #region For TeamA
 
         [TestMethod]
         public void GetScore_ShouldReturn_002_000_WhenTeamAScore2Points()
@@ -102,5 +110,23 @@ namespace TestTdd_Basket
             scoreKeeper.ScoreTeamA2();
             Assert.AreEqual(scoreKeeper.GetScore(), "004:000");
         }
+
+        [TestMethod]
+        public void GetScore_ShouldReturn_006_000_WhenTeamAScore3Times2Points()
+        {
+            scoreKeeper.ScoreTeamA2();
+            scoreKeeper.ScoreTeamA2();
+            scoreKeeper.ScoreTeamA2();
+            Assert.AreEqual(scoreKeeper.GetScore(), "006:000");
+        }
+        #endregion
+        #region For TeamB
+        [TestMethod]
+        public void GetScore_ShouldReturn_000_002_WhenTeamBScore2Points()
+        {
+            scoreKeeper.ScoreTeamB2();
+            Assert.AreEqual(scoreKeeper.GetScore(), "000:002");
+        }
+        #endregion
     }
 }
