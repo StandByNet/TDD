@@ -30,7 +30,8 @@ namespace Tdd_Basket
 
         public void ScoreTeamA3()
         {
-            throw new NotImplementedException();
+            scoreTeam_A += 3;
+            UpdateScoreA(scoreTeam_A);
         }
 
         public void ScoreTeamB1()
@@ -44,7 +45,6 @@ namespace Tdd_Basket
             scoreTeam_B += 2;
             UpdateScoreB(scoreTeam_B);
         }
-
 
         public void ScoreTeamB3()
         {
