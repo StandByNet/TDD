@@ -155,12 +155,12 @@ namespace TestTdd_Basket
 
         #endregion
         #region TeamB
-        //[TestMethod]
-        //public void GetScore_ShouldReturn000_003_WhenTeamBScore3Points()
-        //{
-        //    scoreKeeper.ScoreTeamB3();
-        //    Assert.AreEqual("000:003", scoreKeeper.GetScore());
-        //}
+        [TestMethod]
+        public void GetScore_ShouldReturn000_003_WhenTeamBScore3Points()
+        {
+            scoreKeeper.ScoreTeamB3();
+            Assert.AreEqual("000:003", scoreKeeper.GetScore());
+        }
 
         #endregion
     }
